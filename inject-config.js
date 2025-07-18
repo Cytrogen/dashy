@@ -1,4 +1,5 @@
 const fs = require('fs');
+const yaml = require('js-yaml');
 const config = {
   auth: {
     enableGuestAccess: true,
@@ -12,4 +13,9 @@ const config = {
   }
 };
 
-fs.writeFileSync('user-data/conf.yml', yamlStringify(config)); // 使用 js-yaml 库转换为 YAML
+try {
+  fs.writeFileSync('user-data/conf.yml', yaml.dump(config));
+} catch (e) {
+  console.error('配置文件写入失败:', e);
+  process.exit(1);
+}
