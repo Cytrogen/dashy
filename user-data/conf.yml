@@ -12,6 +12,9 @@ pageInfo:
 # Optional app settings and configuration
 appConfig:
   theme: colorful
+  hideComponents:
+    - settings
+    - config
 
 # Main content - An array of sections, each containing an array of items
 sections:
@@ -60,23 +63,23 @@ sections:
       url: https://portfolio.cytrogen.icu
       icon: favicon
       statusCheck: true
-    - title: HP Instant Ink Plan Calculator
+    - title: HP2IC
       description: HP Instant Ink 订阅计算器工具，用于最优选购方案
       url: https://hp2ic.cytrogen.icu
-      icon: auto
+      icon: favicon
       statusCheck: true
     - title: BetterBaruch 网站
       description: 网页组件实验站，探索 Three.js 3D 库
       url: https://2b.cytrogen.icu
-      icon: auto
+      icon: favicon
       statusCheck: true
-    - title: 卡巴斯基密码管理器到 1Password 转换器
-      description: 功能如名
+    - title: KTOC
+      description: 卡巴斯基密码管理器到 1Password 转换器
       url: https://ktoc.cytrogen.icu
-      icon: auto
+      icon: favicon
       statusCheck: true
-    - title: SVG to Material-UI SvgIcon 转换工具
+    - title: Svg2SvgIcon
       description: 将 SVG 转换为 Material-UI 框架 SvgIcon 标签
       url: https://svg2svgicon.cytrogen.icu
-      icon: far fa-image
+      icon: favicon
       statusCheck: true
