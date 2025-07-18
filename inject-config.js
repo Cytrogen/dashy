@@ -1,12 +1,17 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
+const crypto = require("crypto");
+
+const hashPassword = (text) =>
+  crypto.createHash("sha256").update(text).digest("hex");
+
 const config = {
   auth: {
     enableGuestAccess: true,
     users: [
       {
-        name: process.env.ADMIN_USER,
-        password: process.env.ADMIN_PASS,
+        name: hashPassword(process.env.ADMIN_USER),
+        password: hashPassword(process.env.ADMIN_PASS),
         type: 'admin'
       }
     ]
