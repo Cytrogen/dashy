@@ -44,4 +44,39 @@ sections:
     description: Get help with Dashy, raise a bug, or get in contact
     url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
     icon: far fa-hands-helping
-  
+- name: 我的网站项目
+  icon: fas fa-globe
+  displayData:
+    sortBy: alphabetical
+    itemSize: medium
+  items:
+    - title: 个人博客
+      description: 分享技术、创作与生活见解的平台
+      url: https://cytrogen.icu
+      icon: favicon
+      statusCheck: true
+    - title: Portfolio
+      description: 我的作品展示与技术能力概览
+      url: https://portfolio.cytrogen.icu
+      icon: favicon
+      statusCheck: true
+    - title: HP Instant Ink Plan Calculator
+      description: HP Instant Ink 订阅计算器工具，用于最优选购方案
+      url: https://hp2ic.cytrogen.icu
+      icon: auto
+      statusCheck: true
+    - title: BetterBaruch 网站
+      description: 网页组件实验站，探索 Three.js 3D 库
+      url: https://2b.cytrogen.icu
+      icon: auto
+      statusCheck: true
+    - title: 卡巴斯基密码管理器到 1Password 转换器
+      description: 功能如名
+      url: https://ktoc.cytrogen.icu
+      icon: auto
+      statusCheck: true
+    - title: SVG to Material-UI SvgIcon 转换工具
+      description: 将 SVG 转换为 Material-UI 框架 SvgIcon 标签
+      url: https://svg2svgicon.cytrogen.icu
+      icon: far fa-image
+      statusCheck: true
