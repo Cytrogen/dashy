@@ -26,7 +26,6 @@ doc.appConfig = doc.appConfig || {};
 // 3. 注入 auth
 doc.appConfig.auth = {
   enableGuestAccess: true,
-  defaultAuthLevel: 'guest',
   users: [
     {
       user: process.env.ADMIN_USER,
@@ -43,7 +42,7 @@ const weatherWidget = {
   options: {
     provider: 'accuweather',
     apiKey: '$ACCUWEATHER_API_KEY',
-    locationKey: '2171812',
+    city: 'Manhattan, US',
     units: 'metric',
   },
 };

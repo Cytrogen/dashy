@@ -32,11 +32,19 @@ appConfig:
     customSearchEngine: "https://www.bing.com/search?q="
     openingMethod: newtab
   hideComponents:
-    - settings
-    - config
+    settings: true
+    config: true
 
 # Main content - An array of sections, each containing an array of items
 sections:
+- name: 仪表盘小部件
+  widgets:
+    - type: clock
+    - type: weather
+      options:
+        apiKey: $ACCUWEATHER_API_KEY
+        city: Manhattan, US
+        units: metric
 - name: 我的网站项目
   icon: fas fa-globe
   displayData:
