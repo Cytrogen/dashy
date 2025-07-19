@@ -47,15 +47,6 @@ sections:
         apiKey: $ACCUWEATHER_API_KEY
         city: Manhattan, US
         units: metric
-    - type: rss-feed
-      options:
-        rssUrl: https://cytrogen.icu/atom.xml
-        limit: 3
-    - type: github-profile-stats
-      options:
-        username: Cytrogen
-        hideProfileCard: false
-        hideLanguageCard: false
 - name: 我的网站项目
   icon: fas fa-globe
   displayData:
@@ -92,3 +83,14 @@ sections:
       url: https://svg2svgicon.cytrogen.icu
       icon: favicon
       statusCheck: true
+- name: GitHub 相关
+  widgets:
+    - type: rss-feed
+      options:
+        rssUrl: https://cytrogen.icu/atom.xml
+        limit: 3
+    - type: github-profile-stats
+      options:
+        username: Cytrogen
+        hideProfileCard: false
+        hideLanguageCard: false
