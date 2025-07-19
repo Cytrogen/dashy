@@ -51,6 +51,11 @@ sections:
       options:
         rssUrl: https://cytrogen.icu/atom.xml
         limit: 3
+    - type: github-profile-stats
+      options:
+        username: Cytrogen
+        hideProfileCard: false
+        hideLanguageCard: false
 - name: 我的网站项目
   icon: fas fa-globe
   displayData:
