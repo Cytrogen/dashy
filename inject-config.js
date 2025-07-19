@@ -11,8 +11,9 @@ if (!process.env.ADMIN_USER || !process.env.ADMIN_PASS) {
 }
 
 const filePath = 'user-data/conf.yml';
-// 1. 读取已有配置
 let doc;
+
+// 1. 读取已有配置
 try {
   doc = yaml.load(fs.readFileSync(filePath, 'utf8'));
 } catch (e) {
@@ -35,30 +36,20 @@ doc.appConfig.auth = {
   ]
 };
 
-// 4. 注入天气 Widget
-const WEATHER_SECTION = '仪表盘小部件';
-const weatherWidget = {
-  type: 'weather',
-  options: {
-    provider: 'accuweather',
-    apiKey: '$ACCUWEATHER_API_KEY',
-    city: 'Manhattan, US',
-    units: 'metric',
-  },
-};
-
-// 确保 sections 数组存在
-doc.sections = Array.isArray(doc.sections) ? doc.sections : [];
-
-// 查找是否已存在 “仪表盘小部件” 节
-const idx = doc.sections.findIndex(s => s.name === WEATHER_SECTION);
-if (idx > -1) {
-  doc.sections[idx].widgets = doc.sections[idx].widgets || [];
-  doc.sections[idx].widgets.push(weatherWidget);
-} else {
-  doc.sections.push({
-    name: WEATHER_SECTION,
-    widgets: [weatherWidget],
+// 4. 替换 weather 的 API key
+if (Array.isArray(doc.sections)) {
+  doc.sections.forEach(section => {
+    if (Array.isArray(section.widgets)) {
+      section.widgets.forEach(widget => {
+        if (
+          widget.type === 'weather' &&
+          widget.options &&
+          widget.options.apiKey === '$ACCUWEATHER_API_KEY'
+        ) {
+          widget.options.apiKey = process.env.ACCUWEATHER_API_KEY;
+        }
+      });
+    }
   });
 }
 
