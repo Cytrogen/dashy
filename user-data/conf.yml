@@ -61,36 +61,40 @@ sections:
     - title: Portfolio
       description: 我的作品展示与技术能力概览
       url: https://portfolio.cytrogen.icu
-      icon: favicon
+      icon: fas fa-user-tie
       statusCheck: true
     - title: HP2IC
       description: HP Instant Ink 订阅计算器工具，用于最优选购方案
       url: https://hp2ic.cytrogen.icu
-      icon: favicon
+      icon: fas fa-h
       statusCheck: true
     - title: BetterBaruch 网站
       description: 网页组件实验站，探索 Three.js 3D 库
       url: https://2b.cytrogen.icu
-      icon: favicon
+      icon: fas fa-b
       statusCheck: true
     - title: KTOC
       description: 卡巴斯基密码管理器到 1Password 转换器
       url: https://ktoc.cytrogen.icu
-      icon: favicon
+      icon: fas fa-key
       statusCheck: true
     - title: Svg2SvgIcon
       description: 将 SVG 转换为 Material-UI 框架 SvgIcon 标签
       url: https://svg2svgicon.cytrogen.icu
       icon: favicon
       statusCheck: true
-- name: GitHub 相关
+- name: GitHub 统计
+  icon: fab fa-github
   widgets:
-    - type: rss-feed
-      options:
-        rssUrl: https://cytrogen.icu/atom.xml
-        limit: 3
     - type: github-profile-stats
       options:
         username: Cytrogen
         hideProfileCard: false
         hideLanguageCard: false
+- name: 最新文章
+  icon: fab fa-readme
+  widgets:
+    - type: rss-feed
+      options:
+        rssUrl: https://cytrogen.icu/atom.xml
+        limit: 3
