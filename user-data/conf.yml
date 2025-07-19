@@ -11,42 +11,32 @@ pageInfo:
 
 # Optional app settings and configuration
 appConfig:
-  theme: colorful
+  theme: light
+  cssThemes:
+    - light
+    - dark
+  customColors:
+    light:
+      primary:   "hsl(108, 50%, 90%)"
+      secondary: "hsl(108, 50%, 10%)"
+      tertiary:  "hsl(168, 80%, 20%)"
+      accent:    "hsl(48, 80%, 20%)"
+    dark:
+      primary:   "hsl(108, 50%, 10%)"
+      secondary: "hsl(108, 50%, 90%)"
+      tertiary:  "hsl(168, 80%, 80%)"
+      accent:    "hsl(48, 80%, 80%)"
+  webSearch:
+    disableWebSearch: false
+    searchEngine: custom
+    customSearchEngine: "https://www.bing.com/search?q="
+    openingMethod: newtab
   hideComponents:
     - settings
     - config
 
 # Main content - An array of sections, each containing an array of items
 sections:
-- name: Getting Started
-  icon: fas fa-rocket
-  items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
-  - title: GitHub
-    description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
-    icon: favicon
-  - title: Docs
-    description: Configuring & Usage Documentation
-    provider: Dashy.to
-    icon: far fa-book
-    url: https://dashy.to/docs
-  - title: Showcase
-    description: See how others are using Dashy
-    url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-    icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
 - name: 我的网站项目
   icon: fas fa-globe
   displayData:
